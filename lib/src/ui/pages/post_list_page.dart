@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../topics.dart';
 import '../components/post_list_view.dart';
@@ -102,7 +103,9 @@ class _FooterSection extends StatelessWidget {
           icon: const Icon(Icons.code),
           color: Colors.grey[700],
           tooltip: "ソースコード",
-          onPressed: () {},
+          onPressed: () {
+            launch("https://github.com/nskhei/flutter-qiita-viewer");
+          },
         ),
       ],
     );
